@@ -1,0 +1,38 @@
+/* 使用伪类清除浮动 */
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+/* 兼容低版本IE */
+.clearfix {
+    zoom: 1;
+}
+
+/* 左浮动 */
+.lt {
+    float: left;
+}
+
+/* 有浮动 */
+.rt {
+    float: right;
+}
+
+/* 显示隐藏 */
+.hid {
+    display: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

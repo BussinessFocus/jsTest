@@ -1,0 +1,498 @@
+.my-container {
+    padding: 30px 40px;
+}
+
+// tab和搜索区域样式
+.tabandSearch-container {
+    height: 77px;
+    line-height: 77px;
+    background: #373C53;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 0 30px;
+
+    // tab盒子
+    .tab-box {
+        height: 100%;
+
+        .tab-div {
+            height: 100%;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: inline-block;
+            font-family: PingFangSC-Medium;
+            font-size: 26px;
+            line-height: 37px;
+            padding: 20px 16px 0;
+            color: #FFFFFF;
+            letter-spacing: 0;
+
+            &.active {
+                background: #2A2E42;
+                color: #3173E3;
+                border-bottom: 2px solid #317EFE;
+            }
+        }
+    }
+
+    // 添加和搜索盒子
+    .addAndSearch-box {
+        box-sizing: border-box;
+        line-height: 0;
+        height: 100%;
+
+        .add-btn {
+            vertical-align: top;
+            margin-top: 14px;
+        }
+
+        .add-btn,
+        .search-btn {
+            color: #FFFFFF;
+            display: inline-block;
+            width: 78px;
+            height: 50px;
+            background: #317EFE;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .search-box {
+            position: relative;
+            display: inline-block;
+            width: 350px;
+            height: 50px;
+            background: #2A2E42;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 14px 0 0 20px;
+
+            input {
+                position: absolute;
+                background: #2A2E42;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                box-sizing: border-box;
+                border: none;
+                outline: none;
+                color: #fff;
+                padding-left: 20px;
+                font-size: 20px;
+
+            }
+
+            .search-btn {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+// table区域样式
+.table-container {
+    margin-top: 30px;
+    height: 682px;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #373C53;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    position: relative;
+}
+
+// table表格区域
+.my-table {
+    width: 100%;
+    background-color: #2A2E42;
+    color: #C4C4CD;
+    text-align: center;
+    table-layout: fixed;
+    font-size: 26px;
+
+    th {
+        text-align: center;
+        border-color: #373C53;
+        color: #C4C4CD;
+    }
+
+    tbody {
+        color: #fff;
+        tr {
+            cursor: pointer;
+            &:hover {
+                background: #22263c;
+            }
+        }
+    }
+
+    tr {
+        height: 77px;
+    }
+
+    td {
+        border-color: #373C53;
+
+        &.operation {
+            span {
+                cursor: pointer;
+            }
+
+            .repair-btn,
+            .xiufu-btn {
+                color: #21CF4E;
+                margin-right: 26px;
+            }
+
+            .scrap-btn {
+                color: #F82063;
+                margin-right: 26px;
+            }
+
+            .detail-btn {
+                color: #317EFE
+            }
+        }
+    }
+}
+
+// 分页按钮区域
+#pagingation {
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .my-pagination {
+        display: inline-block;
+
+        .paginationjs-pages {
+            ul {
+                li {
+                    border: none;
+
+                    a {
+                        width: 30px;
+                        height: 30px;
+                        background: #2A2E42;
+                        border-radius: 3px;
+                        color: #FFF;
+                        line-height: 30px;
+                    }
+
+                    &.active {
+                        a {
+                            background: #317EFE;
+                        }
+                    }
+
+                    &.paginationjs-ellipsis.disabled {}
+
+                    &.paginationjs-prev {
+                        >a {
+
+                            background: url('../../assets/prve.png') no-repeat center;
+                        }
+                    }
+
+
+                    &.paginationjs-next {
+                        >a {
+                            background: url('../../assets/next.png') no-repeat center;
+                        }
+                    }
+
+                    &.active {
+                        >a {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+
+
+                li+li {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+}
+
+// 模态框整体区域
+.modal-content.my-model-content {
+    width: 764px;
+    padding-bottom: 50px;
+    background: #373C53;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    position: relative;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .model-content-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding-top: 19px;
+
+        .input-div {
+            height: 50px;
+            line-height: 50px;
+            text-align: right;
+            padding-right: 164px;
+            margin-top: 30px;
+
+            >span {
+                font-family: PingFangSC-Medium;
+                font-size: 26px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+            }
+
+            >.endoscope-box {
+                display: inline-block;
+                position: relative;
+                width: 350px;
+                height: 100%;
+                text-align: center;
+
+                /* 层叠选择插件默认样式 */
+                .chosen-container {
+                    width: 100%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    border: 2px solid #2A2E42;
+                    border-radius: 10px;
+                    background-color: #373C53;
+                    text-align: center;
+                    outline: none;
+
+                    .chosen-single {
+                        height: 100%;
+                        border: none;
+                        line-height: 46px;
+                        background: #373C53;
+                        color: #FFFFFF;
+                        font-size: 26px;
+                        padding: 0;
+                        box-shadow: none;
+                        -webkit-box-shadow: none;
+
+                        div b {
+                            background-position-y: 14px;
+                        }
+                    }
+
+                    .chosen-drop {
+                        .chosen-search-input {
+                            border: 1px solid #fff;
+                            background: #373C53;
+                            padding: 0;
+                            height: 40px;
+                            line-height: 38px;
+                            font-size: 26px;
+                        }
+
+                        background-color: #373C53;
+                        border: 1px solid #7b9dd4;
+
+                        .chosen-results {
+                            li.active-result {
+                                color: #fff;
+                                font-size: 26px;
+                                height: 40px;
+                                line-height: 40px;
+                                padding: 0;
+
+                                &.highlighted {
+                                    background: #1e90ff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            >input,
+            select {
+                width: 350px;
+                height: 100%;
+                outline: none;
+                background: #2A2E42;
+                border: none;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 26px;
+                padding-left: 20px;
+                &[readonly] {
+                    color: #c4c4cd;
+                }
+            }
+        }
+    }
+}
+
+// 模态框的按钮
+.my-layer-btn-box {
+    margin-top: 60px;
+    text-align: center;
+
+
+    .my-layer-btn {
+        display: inline-block;
+        width: 200px;
+        height: 60px;
+        line-height: 60px;
+        background-color: #FFFFFF;
+        color: #317EFE;
+        border-radius: 10px;
+        font-size: 26px;
+        cursor: pointer;
+
+        &.my-layer-sure-btn {
+            margin-left: 36px;
+            background-color: #317EFE;
+            color: #fff;
+        }
+    }
+}
+
+// 模拟关闭的叉号
+.my-layer-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+// 详情模态框区域 
+.model-content-container2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 10px;
+    position: relative;
+
+    .word-div {
+        margin-top: 40px;
+        line-height: 37px;
+
+        >div {
+            width: 50%;
+
+            >span {
+
+                /* display: table-cell; */
+                &.key-span {
+                    display: inline-block;
+                    text-align: right;
+                    width: 160px;
+                    padding-right: 10px;
+                    height: 100%;
+                    vertical-align: top;
+                }
+
+                &.val-span {
+                    display: inline-block;
+                    width: 210px;
+                }
+            }
+        }
+
+        .key-span {
+            color: #C4C4CD;
+            font-size: 26px;
+        }
+
+        .val-span {
+            color: #FFFFFF;
+            font-size: 26px;
+        }
+    }
+}
+
+// 询问模态框区域
+.modal-content.my-repair-model-content {
+    background: #373C53;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    width: 600px;
+    padding-bottom: 40px;
+    /* height: 300px; */
+}
+
+// 模态框输入信息区域样式
+.info-box {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #fff;
+    input {
+        outline: none;
+        border: none;
+        background-color: #2a2e42;
+        border-radius: 10px;
+        padding-left: 20px;
+        height: 100%;
+        &[readonly] {
+            color: #c4c4cd;
+        }
+    }
+    .info-row-div {
+        height: 50px;
+        margin: 20px;
+        .info-key {
+            display: inline-block;
+            width: 120px;
+            text-align: center;
+        }
+    }
+}
+.my-layer-box {
+    width: 100%;
+    height: 100%;
+
+    .my-layer-word {
+        display: block;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .my-layer-btn-box {
+        margin-top: 80px;
+        text-align: center;
+
+        .my-layer-btn {
+            display: inline-block;
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+            background-color: #FFFFFF;
+            color: #317EFE;
+            border-radius: 10px;
+            font-size: 26px;
+            cursor: pointer;
+
+            &.my-layer-sure-btn {
+                margin-left: 36px;
+                background-color: #317EFE;
+                color: #fff;
+            }
+        }
+    }
+}

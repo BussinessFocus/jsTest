@@ -1,0 +1,46 @@
+@import url("./common.css");/*引入通用的css*/
+
+body{background: #575b6d;min-width: 1365px;}
+.navbar-me{height: 120px;background: #262a3d url(../../assets/headbg.png) no-repeat top center;background-size: 100% 100%; margin: 0;border: none;box-shadow: 0 2px 22px 0 rgba(0,0,0,0.34);border-radius: 0;}
+.navbarcont{height: 100%;margin: 0 60px;position: relative;}
+.navbar-collapse{position: absolute;left: 31%;}
+.navbar-default .navbar-brand{font-size: 32px; color: #FFFFFF;line-height: 120px;height: 120px;padding: 0;}
+.navbar-default .navbar-brand:hover{color: #fff;}
+.navbar-default .navbar-nav>li{position: relative;}
+.navbar-default .navbar-nav>li>a{padding: 0 35px;line-height: 120px;cursor: pointer;font-size: 22px;color: #fff;}
+.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:active,.navbar-default .navbar-nav>li>a:focus{color: #fff;}
+.navbar-default .navbar-nav>li .line{height: 6px;background: #317EFE;position: absolute;bottom: 0;left: 0;right: 0;display: none;}
+.navbar-default .navbar-nav>li.on .line{display: block;}
+.navbar-default .navbar-nav>li.on>a{background: #373C53;color: #317EFE;font-size: 24px;}
+.navbar-user{float: right;line-height: 120px;}
+.navbar-user>span{display: inline-block;font-size: 16px;color: #B7B7C1;}
+.usericon{display: inline-block;width: 35px;height: 35px;background: url(../../assets/user.png) no-repeat;vertical-align: middle;margin-right: 10px;}
+.userquit{cursor: pointer;font-size: 16px;color: #B7B7C1;display: inline-block;text-decoration: none;}
+.userquit:hover,.userquit:active,.userquit:focus{color: #B7B7C1;text-decoration: none;}
+
+
+.textalgin-r{text-align: right;}
+.closemodal{color: #fff;text-shadow: none;font-size: 54px;opacity: 1;font-weight: normal;margin-right: 25px;outline: none;}
+.closemodal:hover span{color: #fff;}
+.modalmod{width: 100%;}
+.btnstyle .btn{ border-radius: 10px;width:200px;height: 60px;font-size: 26px;margin: 0 50px;outline: none;}
+.btnstyle .btn-default{background: #FFFFFF;color: #317EFE;}
+.btnstyle .btn-primary{background: #317EFE;color: #FFFFFF;}
+.modalcont.modalcont-sm{margin: 10% auto 0;width: 540px;height: auto;background: #373C53;text-align: center; box-shadow: 0 5px 14px 0 rgba(0,0,0,0.05);border-radius: 10px;}
+.delfont{color: #fff;font-size: 30px;line-height: 80px;text-align: center;}
+.modalcont-sm .btnstyle .btn{margin: 0 25px;}
+.modalcont-sm .btnstyle{padding: 30px 0 40px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

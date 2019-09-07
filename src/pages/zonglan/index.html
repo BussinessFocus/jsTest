@@ -1,0 +1,65 @@
+<%= require('html-loader!src@/templates/start.html') %>
+<!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+<%= require('html-loader!src@/templates/head.html') %>
+
+<div class="pagecont">
+    <div class="echartscont">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="echartsmod">
+                    <div id="onechart" class="chartmod xxsjchartmod"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="echartsmod">
+                    <div id="twochart" class="chartmod ygjcchartmod"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="echartsmod">
+                    <div class="charttitle-tab" id="ccstitle">
+                        <!-- <span class="on">储藏室1</span>
+                        <span>储藏室2</span> -->
+                    </div>
+                    <div class="chart-tab" id="ccstime">
+                        <span class="on">当天</span>
+                        <span>本周</span>
+                        <span>本月</span>
+                        <span>今年</span>
+                    </div>
+                    <div id="threechart" class="chartmod"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="echartsmod">
+                    <div class="chardropdown">
+                        <select class="form-control" id="yeardate">
+                            <option>2019</option>
+                            <option>2018</option>
+                            <option>2017</option>
+                        </select>
+                    </div> 
+                    <div id="fourchart" class="chartmod"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="echartsmod">
+                    <div class="charttitle-tab" id="xmctitle">
+                        <!-- <span class="on">霉洗池1</span>
+                        <span>霉洗池2</span> -->
+                    </div>
+                    <div class="chart-tab" id="xmctime">
+                        <span class="on">当天</span>
+                        <span>本周</span>
+                        <span>本月</span>
+                        <span>今年</span>
+                    </div>
+                    <div id="fivechart" class="chartmod"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%= require('html-loader!src@/templates/footer.html') %>

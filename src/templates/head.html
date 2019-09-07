@@ -1,0 +1,40 @@
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-me ">
+    <div class="navbarcont clearfix">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">河南省人民医院洗消系统</a>
+        </div>
+        <div class="collapse navbar-collapse" id="">
+            <ul class="nav navbar-nav">
+                <li href-data="zonglan"><a href="zonglan.html">总览</a><i class="line"></i></li>
+                <li href-data="maintain"><a href="maintain.html">维修</a><i class="line"></i></li>
+                <li href-data="setting"><a href="setting.html" >设置</a><i class="line"></i></li>
+                <li href-data="shebeiweihu"><a href="shebeiweihu.html">设备维护</a><i class="line"></i></li>
+                <li href-data="yuanganjiance"><a href="yuanganjiance.html">院感监测</a><i class="line"></i></li>
+            </ul>
+        </div>
+        <div class="navbar-user">
+            <span><i class="usericon"></i><span id="usernick">李医师</span></span>
+            <span>&nbsp;&nbsp; | &nbsp;&nbsp;</span>
+            <span  class="userquit" data-toggle="modal" data-target="#quitModal">退出</span>
+        </div>
+    </div>
+</nav>
+
+<!-- 退出提示 -->
+<div class="modal fade" id="quitModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
+    <div class="modalcont modalcont-sm">
+        <div class="textalgin-r clearfix">
+            <button type="button" class="close closemodal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modalmod">
+            <div class="delfont">确定退出吗？</div>
+        </div>
+        <div class="modalfooter btnstyle">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary quitdefinebtn" >确定</button>
+        </div>
+    </div>
+</div>

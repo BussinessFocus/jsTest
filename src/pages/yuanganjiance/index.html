@@ -1,0 +1,279 @@
+<%= require('html-loader!src@/templates/start.html') %>
+
+<%= require('html-loader!src@/templates/head.html') %>
+<div class="my-container">
+    <div class="content-container">
+        <!-- 表格上面的标题文字 -->
+        <div class="title-container">
+            <span class="title-span">院感监测数据</span>
+            <span class="add-span"><span style="font-size: 30px; font-weight: 600;">＋</span>添加</span>
+            <!-- 右侧字典维护按钮 -->
+            <div class="zdwh-div rt">
+                <img src="<%= require('src@/assets/zidian.png')%>" alt="">
+                <span class="zdwh">字典维护</span>
+                <!-- <img src="<%= require('src@/assets/rt.png')%>" alt=""> -->
+                <img src="<%= require('@/static/rt.png')%>" alt="">
+            </div>
+        </div>
+        <!-- table表格区域 -->
+        <table class="my-table" border="1" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>名称</th>
+                    <th>监测项目</th>
+                    <th>监测结论</th>
+                    <th>审核人</th>
+                    <th>创建时间</th>
+                    <th class="opera-cell">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <!-- 分页按钮区域 -->
+        <div id="pagingation"></div>
+        <!-- <img src="<%= require('@/static/login-banner1.png')%>" alt=""> -->
+    </div>
+</div>
+<!-- 添加区域模态框 -->
+<div class="modal fade" id="addData-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <!-- 这个里面放内容 -->
+        <div class="modal-content my-model-content my-addmodel-content">
+            <div class="model-content-container1">
+                <span class="my-layer-close" data-dismiss="modal">×</span>
+                <!-- 标题 -->
+                <div class="add-modal-title">
+                    院感监测数据
+                </div>
+                <!-- 每一行 -->
+                <div class="add-modal-row clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">监测结论 </span>
+                        <span class="val-span">
+                            <select name="" class="MonitoringConclusions" id="MonitoringConclusions">
+                            </select>
+                        </span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">标准值 </span>
+                        <span class="val-span">
+                            <select name="" class="StandardValue" id="StandardValue">
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="add-modal-row clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">采样点 </span>
+                        <span class="val-span">
+                            <select name="EndoscopeID" class="EndoscopeID" id="EndoscopeID">
+                            </select>
+                        </span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">结果单位 </span>
+                        <span class="val-span">
+                            <select name="" class="Unit" id="Unit">
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="add-modal-row clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">监测项目 </span>
+                        <span class="val-span">
+                            <select name="" class="TestItems" id="TestItems">
+                            </select>
+                        </span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">审核者 </span>
+                        <span class="val-span">
+                            <select name="" class="Auditor" id="Auditor">
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="add-modal-row clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">结果 </span>
+                        <span class="val-span">
+                            <input type="text" id="Result" class="Result" value="">
+                        </span>
+                    </div>
+                </div>
+                <!-- 按钮区域 -->
+                <div class="btn-box">
+                    <div class="my-layer-btn-box">
+                        <span class="my-layer-btn my-layer-sure-cancel-btn" data-dismiss="modal">取消</span>
+                        <span class="my-layer-btn my-layer-sure-btn add-sure-btn">确定</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 编辑区域模态框 -->
+<div class="modal fade" id="editData-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <!-- 这个里面放内容 -->
+        <div class="modal-content my-model-content my-addmodel-content">
+            <div class="model-content-container1">
+                <span class="my-layer-close" data-dismiss="modal">×</span>
+                <!-- 标题 -->
+                <div class="add-modal-title">
+                    院感监测数据
+                </div>
+                <!-- 每一行 -->
+                <div class="add-modal-row clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">监测结论 </span>
+                        <span class="val-span">
+                            <select name="" class="MonitoringConclusions" id="edit-MonitoringConclusions">
+                            </select>
+                        </span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">标准值 </span>
+                        <span class="val-span">
+                            <select name="" class="StandardValue" id="edit-StandardValue">
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="add-modal-row clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">采样点 </span>
+                        <span class="val-span">
+                            <select name="EndoscopeID" class="EndoscopeID" id="edit-EndoscopeID">
+                            </select>
+                        </span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">结果单位 </span>
+                        <span class="val-span">
+                            <select name="" class="Unit" id="edit-Unit">
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="add-modal-row clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">监测项目 </span>
+                        <span class="val-span">
+                            <select name="" class="TestItems" id="edit-TestItems">
+                            </select>
+                        </span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">审核者 </span>
+                        <span class="val-span">
+                            <select name="" class="Auditor" id="edit-Auditor">
+                            </select>
+                        </span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="add-modal-row clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">结果 </span>
+                        <span class="val-span">
+                            <input type="text" id="edit-Result" class="Result">
+                        </span>
+                    </div>
+                </div>
+                <!-- 按钮区域 -->
+                <div class="btn-box">
+                    <div class="my-layer-btn-box">
+                        <span class="my-layer-btn my-layer-sure-cancel-btn" data-dismiss="modal">取消</span>
+                        <span class="my-layer-btn my-layer-sure-btn edit-sure-btn">确定</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 删除模态框区域 -->
+<div class="modal fade" id="del-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <!-- 这个里面放内容 -->
+        <div class="modal-content my-repair-model-content">
+            <div class="my-layer-box">
+                <span class="my-layer-close" data-dismiss="modal">×</span>
+                <span class="my-layer-word">确定删除该行数据吗吗 ? </span>
+                <div class="my-layer-btn-box">
+                    <span class="my-layer-btn my-layer-sure-cancel-btn" data-dismiss="modal">取消</span>
+                    <span class="my-layer-btn my-layer-sure-btn sure-del-item">确定</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 查看详情模态框 -->
+<div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <!-- 这个里面放内容 -->
+        <div class="modal-content my-model-content">
+            <div class="model-content-container2">
+                <span class="my-layer-close" data-dismiss="modal">×</span>
+                <!-- 每一行 -->
+                <div class="word-div clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">监测结论: </span>
+                        <span class="val-span" id="monitoringConclusionsName-val">205914</span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">标准值: </span>
+                        <span class="val-span" id="standardValueName-val">损坏</span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="word-div clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">采样点: </span>
+                        <span class="val-span" id="endoscope-val">2019.09.02</span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">结果单位: </span>
+                        <span class="val-span" id="unitName-val">不知道咋坏的</span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="word-div clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">监测项目: </span>
+                        <span class="val-span" id="testItemsName-val">205914</span>
+                    </div>
+                    <div class="lt r-div">
+                        <span class="key-span">审核者: </span>
+                        <span class="val-span" id="auditorName-val">损坏</span>
+                    </div>
+                </div>
+                <!-- 每一行 -->
+                <div class="word-div clearfix">
+                    <div class="lt l-div">
+                        <span class="key-span">结果: </span>
+                        <span class="val-span" id="result-val">205914</span>
+                    </div>
+                </div>
+                <!-- 按钮区域 -->
+                <div class="btn-box">
+                    <div class="my-layer-btn-box">
+                        <span class="my-layer-btn my-layer-sure-cancel-btn" data-dismiss="modal">取消</span>
+                        <!-- <span class="my-layer-btn my-layer-sure-btn">确定</span> -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<%= require('html-loader!src@/templates/footer.html') %>
