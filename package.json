@@ -43,7 +43,7 @@
   "dependencies": {
     "bootstrap": "^3.4.1",
     "echarts": "^4.2.1",
-    "jquery": "^1.12.4",
+    "jquery": "^3.4.1",
     "layui-layer": "^1.0.9",
     "paginationjs": "^2.1.4"
   }
